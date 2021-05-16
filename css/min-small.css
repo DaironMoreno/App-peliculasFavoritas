@@ -1,0 +1,6 @@
+.main_contacto__container ul
+{
+	flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
