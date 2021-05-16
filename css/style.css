@@ -1,13 +1,85 @@
-html
-{
-	
-}
+
 body
 {
-	background-color: #F1F1F1;
+	background-color: #FFF;
+	font-family: 'Nunito Sans', sans-serif;
+	
 }
 .edit-app:hover
 {
 	cursor: pointer;
 	border: 2px solid #00FF00;
+}
+
+.bodyApp
+{
+	min-height: 70vh;
+}
+.main_Contacto
+{
+    width: 100%;
+    background-color: #201E1C;
+    position: absolute;
+    bottom: '';
+}
+.main_contacto__container ul
+{
+    display: flex;
+	flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main_contacto__container ul li
+{
+    list-style: none;    
+}
+.main_contacto__container ul li a
+{
+    text-decoration: none;
+    font-size: 3rem;
+    color: #FFF;  
+}
+.main_contacto__description
+{
+    display: block;
+    color: #FFF;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 5px;
+}
+.mail_contacto__data{
+    display: none;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    top: -10px;
+    left: 35%;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    color:#FFF;
+    background-color:var(--titulosecundario);
+    transition: ease-in-out 1s;
+    z-index: 1;
+}
+.mail_contacto:hover .mail_contacto__data{
+    display: block;
+}
+.git:hover
+{
+    border-bottom: 2px solid #2C974B;
+}
+.twitter:hover
+{
+    border-bottom: 2px solid #1DA1F2;
+    color:#1DA1F2;
+}
+.mail:hover
+{
+    border-bottom: 2px solid #FFF;
+}
+.in:hover
+{
+    border-bottom: 2px solid #0A66C2;
+    color:#0A66C2;
 }

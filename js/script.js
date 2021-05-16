@@ -21,6 +21,7 @@ if(localstorage.getItem('aplicaciones') == null)
 /*
 	con esta funcion añadimos mediante el innerHTML nuevas tarjetas con los datos
 	recolectados del array tipo JSON aplicaciones
+
 */
 function agregarApp()
 {
@@ -39,8 +40,8 @@ function agregarApp()
 		document.getElementById('aplicaciones').innerHTML += 
 				`<div class="col-sm-6 col-md-4 col-xs-3 col-lg-2 mb-4">
 					<div class="card shadow-lg">
-						<div class="card edit-app" onclick="editarApp(${indice});" >
-						  <img src="${app.urlImagen}" class="card-img-top" alt="...">
+						<div class="card"  >
+						  <img src="${app.urlImagen}"  onclick="editarApp(${indice});" class="card-img-top img-thumbnail img-fluid edit-app" alt="...">
 						  <div class="card-body">
 						    <h5 class="card-title">${app.nombreAplicacion}</h5>
 						    <p class="card-text">${app.desarrollador}</p>
@@ -58,13 +59,6 @@ function agregarApp()
 	});
 }
 agregarApp();
-
-for(let i = 1 ; i <=10; i++)
-{
-	document.getElementById('imagen-list').innerHTML +=
-	`<option value="img/${i}.webp">Imagen #${i}</option>` 
-
-}
 function newApp()
 {
 	indiceApp = null; 

@@ -4,21 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>App Favoritas</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/784be56d59.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+	<nav class="navbar navbar-expand-lg navbar-light  bg-dark mb-5">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#">Peliculas Favoritas</a>
+	    <a class="navbar-brand text-white" href="#">Peliculas Favoritas</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
+	      <span class="navbar-toggler-icon text-white"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarNav">
 	      <ul class="navbar-nav">
 	        <li class="nav-item">
-	          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="newApp();">
+	          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="newApp();">
 	          		Agregar
 	          </button>
 	        </li>
@@ -26,7 +28,7 @@
 	    </div>
 	  </div>
 	</nav>
-	<div class="container-fluid">
+	<div class="container-fluid bodyApp">
 		<div class="row" id="aplicaciones">
 			
 		</div>
@@ -42,17 +44,18 @@
 	        	<div class="container">
 	        		<div class="row">
 							<div class   ="col-12">
-							<input class ="form-control" id="nombre" 		type="text"   placeholder="Nombre App"  ><br>
-							<input class ="form-control" id="desarrollador" type="text"   placeholder="Desarrollador App"  ><br>
-							<input class ="form-control" id="calificacion" 	type="number" placeholder="calificación" min="0" max="5"><br>
-							<input class ="form-control" id="urlimagen" 	type="text"   placeholder="Url de Imagen"><br>
-	        				<select class="form-control"   id="imagen-list">
+							<input class ="form-control" id="nombre" 		required autocomplete="off" type="text"   placeholder="Titulo Pelicula"  ><br>
+							<input class ="form-control" id="desarrollador" required autocomplete="off" type="text"   placeholder="Genero"  ><br>
+							<input class ="form-control" id="calificacion" 	required autocomplete="off" type="number" placeholder="calificación" min="0" max="5"><br>
+							<input class ="form-control" id="imagen-list" 	required autocomplete="off" type="text"   placeholder="Url de Imagen"><br>
+	        				<!-- <select class="form-control"   id="imagen-list">
 	        					
-	        				</select>
+	        				</select> -->
 	        			</div>
 	        		</div>
 	        	</div>
 	      </div>
+	      
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 	        <button id="btn-guardar"type="button" id="botonGuardar" class="btn btn-primary" onclick="nuevaApp();">Guarda Cambios</button>
@@ -61,7 +64,48 @@
 	    </div>
 	  </div>
 	</div>
-
+	<div class="container-fluid">
+		<div class="row">
+			<section class="main_Contacto" id="contacto">
+			<div class="main_contacto__container">
+	            <ul>
+	                <li>
+	                    <a href="https://github.com/DaironMoreno" class="git" target="__blank" title="https://github.com/DaironMoreno">
+	                        <i class="fab fa-git-square"></i>
+	                    </a>
+	                    <small class="main_contacto__description">GitHub</small>
+	                </li>
+	                <li>
+	                    <a href="https://twitter.com/DaironMoreno" class="twitter" target="__blank" title="https://twitter.com/DaironMoreno" >
+	                        <i class="fab fa-twitter-square"></i>
+	                    </a>
+	                    <small class="main_contacto__description">Twitter</small>
+	                </li>  
+	                <li class="mail_contacto">
+	                    <a href="" target="__blank" class="mail" >
+	                        <i class="fas fa-envelope"></i>
+	                    </a>
+	                    <small class="main_contacto__description">Email</small>
+	                    <p class="mail_contacto__data">Contactame: Dairon9@gmail.com</p>
+	                </li>  
+	                <li>
+	                    <a href="https://www.linkedin.com/in/dairon-moreno/" target="__blank" class="in">
+	                        <i class="fab fa-linkedin-in"></i>
+	                    </a>
+	                    <small class="main_contacto__description">Linkedin</small>
+	                </li>  
+	                <li class="mail_contacto">
+	                    <a href="https://platzi.com/p/daironmoreno/" target="__blank" class="platzi">
+	                        <img src="img/platzi.ico"  width="70px" height="70px">
+	                    
+	                    <small class="main_contacto__description">@daironMoreno</small>
+	                    </a>
+	                </li>  
+	            </ul>  
+			</div>
+    		</section>
+		</div>
+	</div>	
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src ="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 	<script src ="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
